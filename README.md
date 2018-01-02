@@ -33,7 +33,8 @@ Open source projects to work properly:
 * [node.js] - evented I/O for the backend
 * [Express] - fast node.js network app framework
 * [SwaggerTools] - middleware for express to handle basic endpoint validation
-* [Async] - library for managing flow of aysnc calls
+* [Async] - library for managing flow of async calls
+* [MongoDB] - noSQL document based object oriented data store
 
 ### Testing Framework
 
