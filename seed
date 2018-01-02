@@ -1,0 +1,4 @@
+-#!/bin/sh
+ sudo mongorestore --db questionnaire-test ./seed-data/questionnaire-test
+ exit
+EOF
