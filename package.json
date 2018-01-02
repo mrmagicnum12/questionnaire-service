@@ -10,7 +10,10 @@
     "express": "^4.15.3",
     "log4js": "^2.4.1",
     "mongoose": "^4.11.0",
-    "swagger-tools": "^0.10.1"
+    "questionnaire-models": "git+https://github.com/mrmagicnum12/questionnaire-models.git",
+    "simple-object-path": "^1.1.0",
+    "swagger-tools": "^0.10.1",
+    "uuid": "^3.1.0"
   },
   "author": "Anthony Buchanan",
   "license": "ISC"

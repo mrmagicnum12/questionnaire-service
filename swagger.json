@@ -24,7 +24,13 @@
         "tags": [
           "/v0/start"
         ],
-        "parameters": [],
+        "parameters": [          {
+            "name": "questionnaireId",
+            "in": "query",
+            "description": "Id for desired Questionnaire",
+            "required": true,
+            "type": "string"
+          }],
         "responses": {
           "200": {
             "description": "Created"
