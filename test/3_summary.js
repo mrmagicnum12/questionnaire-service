@@ -25,6 +25,8 @@ describe("/summary", ()=>{
     .set('sessionId', '4ed8c51d-0e4f-4180-b557-35a1df79cbaa')
     .end((req, res)=>{
       expect(res).to.have.status(200);
+      expect(typeof res.body).to.equal('object');
+      expect(typeof res.body.summary).to.equal('object');
       done();
     });
   });
@@ -36,6 +38,8 @@ describe("/summary", ()=>{
     .set('sessionId', '323233')
     .end((req, res)=>{
       expect(res).to.have.status(401);
+      expect(typeof res.body).to.equal('object');
+      expect(typeof res.body.message).to.equal('string');
       done();
     });
   });

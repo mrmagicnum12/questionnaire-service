@@ -4,6 +4,7 @@
   "description": "Microservice for Questionnaire Demo Project",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "coverage": "NODE_ENV=TEST istanbul cover _mocha; cp coverage/lcov-report/index.html test/coverage.html",
     "test": "mocha",
     "showcoverage": "open coverage/lcov-report/index.html"
@@ -19,10 +20,9 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "nock": "^9.1.5",
-    "request": "^2.83.0"
+    "mocha": "^3.2.0"
   },
   "author": "Anthony Buchanan",
   "license": "ISC"

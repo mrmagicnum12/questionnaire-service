@@ -26,6 +26,7 @@ describe("/next", ()=>{
     .send({ answerId: '5a4b1bbdaf7001a735b50c89', questionId: '5a4b1bbdaf7001a735b50c83' })
     .end((req, res)=>{
       expect(res).to.have.status(200);
+      expect(typeof res.body).to.equal('object');
       done();
     });
   });
@@ -38,6 +39,8 @@ describe("/next", ()=>{
     .send({ answerId: '5a4b1bbdaf7001a735b50c89', questionId: '5a4b1bbdaf7001a735b50c83' })
     .end((req, res)=>{
       expect(res).to.have.status(401);
+      expect(typeof res.body).to.equal('object');
+      expect(typeof res.body.message).to.equal('string');
       done();
     });
   });
@@ -50,6 +53,8 @@ describe("/next", ()=>{
     .send({ answerId: '5a4b1bbdaf7001a735b50c89', questionId: '5a4b1bbdaf7001a735b50c83' })
     .end((req, res)=>{
       expect(res).to.have.status(401);
+      expect(typeof res.body).to.equal('object');
+      expect(typeof res.body.message).to.equal('string');
       done();
     });
   });
@@ -62,6 +67,7 @@ describe("/next", ()=>{
     .send({ answerId: '5a4b1bbdaf7001a735b50c89', questionId: '5a4b1bbdaf7001a735b50c83' })
     .end((req, res)=>{
       expect(res).to.have.status(200);
+      expect(typeof res.body).to.equal('object');
       done();
     });
   });
@@ -74,6 +80,7 @@ describe("/next", ()=>{
     .send({ answerId: '5a4b1bbdaf7001a735b50489', questionId: '5a4bc1adaf7001a735b50ca4' })
     .end((req, res)=>{
       expect(res).to.have.status(200);
+      expect(typeof res.body).to.equal('object');
       done();
     });
   });
@@ -86,6 +93,7 @@ describe("/next", ()=>{
     .send({ answerId: '5a4b1bbdaf7101a735b50489', questionId: '5a4bd0a7af7001a735b50cc1' })
     .end((req, res)=>{
       expect(res).to.have.status(200);
+      expect(typeof res.body).to.equal('object');
       done();
     });
   });
@@ -98,6 +106,7 @@ describe("/next", ()=>{
     .send({ answerId: '5a4b1bbdaf7001a735b50c89', questionId: '5a4b1bbdaf7001a735b50c83' })
     .end((req, res)=>{
       expect(res).to.have.status(200);
+      expect(typeof res.body).to.equal('object');
       done();
     });
   });

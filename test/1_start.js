@@ -25,6 +25,8 @@ describe("/start", ()=>{
     .set('sessionId', _sessionId)
     .end((req, res)=>{
       expect(res).to.have.status(200);
+      expect(typeof res.body).to.equal('object');
+      expect(typeof res.body.question).to.equal('object');
       done();
     });
   });
