@@ -32,13 +32,11 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/confirmMessage_v01_00_rev008_schema"
             }
           },
           "500": {
             "description": "Server Error",
             "schema": {
-              "$ref": "#/definitions/confirmMessage_v01_00_rev008_schema"
             }
           }
         }
@@ -60,13 +58,11 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/confirmMessage_v01_00_rev008_schema"
             }
           },
           "500": {
             "description": "Server Error",
             "schema": {
-              "$ref": "#/definitions/confirmMessage_v01_00_rev008_schema"
             }
           }
         }
@@ -88,13 +84,11 @@
           "400": {
             "description": "Bad Request",
             "schema": {
-              "$ref": "#/definitions/confirmMessage_v01_00_rev008_schema"
             }
           },
           "500": {
             "description": "Server Error",
             "schema": {
-              "$ref": "#/definitions/confirmMessage_v01_00_rev008_schema"
             }
           }
         }

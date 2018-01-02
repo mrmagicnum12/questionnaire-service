@@ -1,10 +1,16 @@
 {
   "name": "questionnaire-service",
   "version": "1.0.0",
-  "description": "Microservice for Questionnaire",
+  "description": "Microservice for Questionnaire Demo Project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "log4js": "^2.4.1",
+    "mongoose": "^4.11.0",
+    "swagger-tools": "^0.10.1"
   },
   "author": "Anthony Buchanan",
   "license": "ISC"
