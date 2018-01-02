@@ -4,7 +4,9 @@
   "description": "Microservice for Questionnaire Demo Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "coverage": "NODE_ENV=TEST istanbul cover _mocha; cp coverage/lcov-report/index.html test/coverage.html",
+    "test": "mocha",
+    "showcoverage": "open coverage/lcov-report/index.html"
   },
   "dependencies": {
     "express": "^4.15.3",
@@ -14,6 +16,13 @@
     "simple-object-path": "^1.1.0",
     "swagger-tools": "^0.10.1",
     "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "nock": "^9.1.5",
+    "request": "^2.83.0"
   },
   "author": "Anthony Buchanan",
   "license": "ISC"

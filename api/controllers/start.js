@@ -42,7 +42,7 @@ const start = (req, res)=>{
   async.series([getFirstQuestion, storeSession], (err)=>{
     if(err){
       logger.error(`Issue in Start Api ${err.message}`);
-      return res.status(500).send({message: err.message})
+      return res.status(500).send({message: err.message});
     }
     return res.status(200).send({question : _firstQuestion});
   });

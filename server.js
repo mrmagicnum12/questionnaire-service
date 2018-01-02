@@ -24,7 +24,7 @@ const start = (cb)=>{
   	//connect to main database
   	mongoose.connect(`mongodb://${config[NODE_ENV].databaseServer}/${config[NODE_ENV].databaseName}`);
   	mongoose.connection.on('error', (error)=>{return cb(new Error('DB connection error:'))});
-  	mongoose.connection.on('connected', function () {
+  	mongoose.connection.on('connected',()=>{
   		logger.info(`Mongoose connected to ${NODE_ENV} DB on ip --> ${config[NODE_ENV].databaseServer}/${config[NODE_ENV].databaseName}`);
   		app.use((req, res, next)=>{
         //necessary for cross-domain request
