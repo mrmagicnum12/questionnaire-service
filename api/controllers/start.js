@@ -4,8 +4,11 @@ const models = require('questionnaire-models');
 const Questionnaire = models.Questionnaire;
 const Session = models.Session;
 const async = require('async');
-const sessionIdCreator = require('../../lib/sessionIdCreator');
 const objectPath = require('simple-object-path');
+const log4js = require('log4js');
+const logger = log4js.getLogger();
+//log4js requires to turn on logging
+logger.level = 'debug';
 
 const start = (req, res)=>{
   const questionnaireId = objectPath(req,'swagger/params/questionnaireId/value');

@@ -46,6 +46,11 @@
             "schema": {
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+            }
+          },          
           "500": {
             "description": "Server Error",
             "schema": {
@@ -94,6 +99,11 @@
             "schema": {
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+            }
+          },
           "500": {
             "description": "Server Error",
             "schema": {
@@ -110,13 +120,24 @@
         "tags": [
           "/summary"
         ],
-        "parameters": [],
+        "parameters": [{
+            "name": "sessionId",
+            "in": "header",
+            "description": "SessionId for User",
+            "required": true,
+            "type": "string"
+        }],
         "responses": {
           "200": {
             "description": "Created"
           },
           "400": {
             "description": "Bad Request",
+            "schema": {
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
             "schema": {
             }
           },
