@@ -1,7 +1,7 @@
 module.exports = {
 	PROD : {
 		'databaseServer': 'localhost:27017',
-		'databaseName': 'questionnaire-prod',
+		'databaseName': 'questionnaire-test',
 		'port': 4000,
 	},
 	TEST: {
@@ -11,7 +11,7 @@ module.exports = {
 	},
 	DEV: {
 		'databaseServer': 'localhost:27017',
-		'databaseName': 'questionnaire-dev',
+		'databaseName': 'questionnaire-test',
 		'port': 4000,
 	}
 }

@@ -16,20 +16,74 @@
     "application/json"
   ],
   "paths": {
-    "/v1/start": {
+    "/start": {
       "get": {
         "x-swagger-router-controller": "start",
         "description": "Start Questionnaire",
         "operationId": "start",
         "tags": [
-          "/v0/start"
+          "/start"
         ],
-        "parameters": [          {
+        "parameters": [{
             "name": "questionnaireId",
-            "in": "query",
+            "in": "header",
             "description": "Id for desired Questionnaire",
             "required": true,
             "type": "string"
+          },{
+              "name": "sessionId",
+              "in": "header",
+              "description": "Session Id to allow access to endpoint",
+              "required": true,
+              "type": "string"
+            }],
+        "responses": {
+          "200": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "schema": {
+            }
+          }
+        }
+      }
+    },
+    "/next": {
+      "post": {
+        "x-swagger-router-controller": "next",
+        "description": "Next Questions and Answers in Questionaire",
+        "operationId": "next",
+        "tags": [
+          "/next"
+        ],
+        "parameters": [{
+            "name": "sessionId",
+            "in": "header",
+            "description": "SessionId for User",
+            "required": true,
+            "type": "string"
+          },
+          {
+              "name": "questionnaireId",
+              "in": "header",
+              "description": "Id for desired Questionnaire",
+              "required": true,
+              "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "answer",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/question_v001_schema"
+            }
           }],
         "responses": {
           "200": {
@@ -48,39 +102,13 @@
         }
       }
     },
-    "/v1/next": {
-      "get": {
-        "x-swagger-router-controller": "next",
-        "description": "Next Questions and Answers in Questionaire",
-        "operationId": "next",
-        "tags": [
-          "/v0/next"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request",
-            "schema": {
-            }
-          },
-          "500": {
-            "description": "Server Error",
-            "schema": {
-            }
-          }
-        }
-      }
-    },
-    "/v1/summary": {
+    "/summary": {
       "get": {
         "x-swagger-router-controller": "summary",
         "description": "All Questions and Answers from Questionaire",
         "operationId": "summary",
         "tags": [
-          "/v1/stocks"
+          "/summary"
         ],
         "parameters": [],
         "responses": {
@@ -101,5 +129,18 @@
       }
     }
   },
-  "definitions": {}
+  "definitions": {
+    "question_v001_schema": {
+      "properties": {
+        "questionId": {
+          "type": "string",
+          "example": "5a4b1b59af7001a735b50c80"
+        },
+        "answerId": {
+          "type": "string",
+          "example": "5a4b1b59af7001a735b50c80"
+        }
+      }
+    }
+  }
 }
